@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YOYO's Award Night</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(to bottom, #fff0f6, #ffe6f0);
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #d63384;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .awards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.award-card {
+  width: 260px;
+  background-color: #fff0f6;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.award-card:hover {
+  transform: scale(1.05);
+}
+
+.award-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-content {
+  padding: 25px 15px;
+}
+
+.card-content .emoji {
+  font-size: 2.5rem;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #d63384;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+
+    .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      font-size: 1rem;
+      color: #d63384;
+      font-weight: 600;
+      border: 2px solid #d63384;
+      padding: 8px 16px;
+      border-radius: 25px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .back-link:hover {
+      background: #d63384;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      .award-card {
+        width: 85%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 YOYO’s Award Night</h1>
+  <p class="subtitle">Click on each award to reveal your certificate — and yes, you totally deserve them all!</p>
+
+  <div class="awards-container">
+
+  <!-- Sweetest Smile Award -->
+  <div class="award-card">
+    <a href="smile-award.html">
+      <div class="card-content">
+        <span class="emoji">🧁</span>
+        <h3>Sweetest Smile Award</h3>
+        <p>For smiles that cause a national sugar shortage 💖</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Outfit Slayer Award -->
+  <div class="award-card">
+    <a href="outfit-award.html">
+      <div class="card-content">
+        <span class="emoji">🌟</span>
+        <h3>Outfit Slayer Award</h3>
+        <p>Outfits? Slayed. Confidence? Unmatched 🔥</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Most Likely to Rule the World -->
+  <div class="award-card">
+    <a href="rule-award.html">
+      <div class="card-content">
+        <span class="emoji">💖</span>
+        <h3>Most Likely to Rule the World</h3>
+        <p>Queen moves only. Bow down 👑</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Most Photogenic Award -->
+  <div class="award-card">
+    <a href="photo-award.html">
+      <div class="card-content">
+        <span class="emoji">📸</span>
+        <h3>Most Photogenic Award</h3>
+        <p>Even her candid shots look editorial 📷</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Chill Master Award -->
+  <div class="award-card">
+    <a href="chill-award.html">
+      <div class="card-content">
+        <span class="emoji">🧘‍♀️</span>
+        <h3>Chill Master Award</h3>
+        <p>Assignments who? She's too busy chilling 😎</p>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+
+
+  <a href="home.html" class="back-link">← Back to Birthday Page</a>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YOYO's Closet by Color</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8fb;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #d63384;
+      margin-top: 40px;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    section h3 {
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .closet-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .closet-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      width: 250px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .closet-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .closet-card p {
+      padding: 12px;
+      font-style: italic;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    .closet-card:hover {
+      transform: scale(1.04);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .pink-bg { background: #ffcce5; }
+    .black-bg { background: #1e1e1e; }
+    .yellow-bg { background: #fff9c4; }
+    .blue-bg { background: #d0e8ff; }
+    .green-bg { background: #d7fcd4; }
+    .red-bg { background: #ffd6d6; }
+    .white-bg { background: #eeecec; }
+    .undefined-bg { background: #f5ecf7; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      font-size: 1rem;
+      color: #d63384;
+      font-weight: 600;
+      border: 2px solid #d63384;
+      padding: 8px 16px;
+      border-radius: 25px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .back-link:hover {
+      background: #d63384;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      .closet-card {
+        width: 90%;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      section h3 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+  <script>
+    function toggleColorSet(color) {
+      const allSets = document.querySelectorAll('.color-set');
+      allSets.forEach(set => set.classList.add('hidden'));
+
+      const selectedSet = document.getElementById(color + '-set');
+      if (selectedSet) {
+        selectedSet.classList.remove('hidden');
+        selectedSet.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>🎨 YOYO's Closet by Color</h2>
+
+  <!-- Pink Section -->
+  <section class="pink-bg">
+    <h3 style="color:#ff00d9">🌸 Pinks & Pastels</h3>
+    <div class="closet-grid">
+      <div class="closet-card" onclick="toggleColorSet('pink')">
+        <img src="pink/6251502659890692904.jpg" alt="YOYO in pink">
+        <p>Sprinkled with sugar and strength — YOYO in her power-pink era!</p>
+      </div>
+    </div>
+    <div class="closet-grid color-set hidden" id="pink-set">
+      <div class="closet-card">
+        <img src="pink/6242003618161084365.jpg" alt="YOYO pink 1">
+        <p>“Slaying softly”</p>
+      </div>
+      <div class="closet-card">
+        <img src="pink/6242003618161084388.jpg" alt="YOYO pink 2">
+        <p>“A rose in full bloom — that’s You”</p>
+      </div>
+      <div class="closet-card">
+        <img src="pink/6097932449205040962.jpg" alt="YOYO pink 3">
+        <p>“Blush and beauty with a bold soul.”</p>
+      </div>
+      <div class="closet-card">
+        <img src="pink/6111421644401661356.jpg" alt="YOYO pink 4">
+        <p>“Who needs roses when you bloom better in pink?”</p>
+      </div>
+      <div class="closet-card">
+        <img src="pink/6242003618161084379.jpg" alt="YOYO pink 5">
+        <p>“Wrapped in pink, walking in dreams”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Black Section -->
+  <section class="black-bg">
+    <h3 style="color:white">🖤 Bold in Black</h3>
+    <div class="closet-grid">
+      <div class="closet-card" onclick="toggleColorSet('black')">
+        <img src="Black/6242003618161084360.jpg" alt="YOYO in black">
+        <p style="color:#050505">Bold, timeless, effortless — black fits like confidence!</p>
+      </div>
+    </div>
+    <div class="closet-grid color-set hidden" id="black-set">
+      <div class="closet-card">
+        <img src="Black/6242003618161084376.jpg" alt="YOYO black 1">
+        <p>“You didn’t need color to stand out — just presence”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Black/6055605336049565042.jpg" alt="YOYO black 2">
+        <p>“Black isn’t dark on you — it’s your spotlight”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Black/6097932449205040982.jpg" alt="YOYO black 3">
+        <p>“You didn’t just wear black — you became the mood”</p>
+      </div>
+       <div class="closet-card">
+        <img src="Black/6158937700820959202.jpg" alt="YOYO black 4">
+        <p>“This dress didn’t come with memories. So i created one”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Yellow Section -->
+  <section class="yellow-bg">
+    <h3 style="color:#050505">💛 Sunny & Yellow</h3>
+    <div class="closet-grid">
+      <div class="closet-card" onclick="toggleColorSet('yellow')">
+        <img src="Yellow/6228902241331427778.jpg" alt="YOYO in yellow">
+        <p>A little sunshine on two feet — her yellow days shine the brightest!</p>
+      </div>
+    </div>
+    <div class="closet-grid color-set hidden" id="yellow-set">
+      <div class="closet-card">
+        <img src="Yellow/6242003618161084368.jpg" alt="YOYO yellow 1">
+        <p>“Sun-kissed? More like sun-powered”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Yellow/6300540857014667144.jpg" alt="YOYO yellow 2">
+        <p>“Every time you wore yellow, the day smiled back”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Yellow/6242003618161084384.jpg" alt="YOYO yellow 3">
+        <p>“Sunshine & smiles.”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Yellow/6055436591079473857.jpg" alt="YOYO yellow 4">
+        <p>“Golden girl energy — glowing without trying”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Yellow/20240216_134953.jpg" alt="YOYO yellow 5">
+        <p>“Sweet like mango, bright like a summer morning”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blue Section -->
+  <section class="blue-bg">
+    <h3 style="color:#000dff">💙 Cool in Blue</h3>
+    <div class="closet-grid">
+      <div class="closet-card" onclick="toggleColorSet('blue')">
+        <img src="Blue/IMG-20240310-WA0036.jpg" alt="YOYO in blue">
+        <p>Calm, cool, and collected — blue, but never boring!</p>
+      </div>
+    </div>
+    <div class="closet-grid color-set hidden" id="blue-set">
+      <div class="closet-card">
+        <img src="Blue/6097932449205041010.jpg" alt="YOYO blue 1">
+        <p>“Soft on the outside, strong in your soul — that’s blue on you”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Blue/6242003618161084362.jpg" alt="YOYO blue 2">
+        <p>“Ocean calm vibes.”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Blue/6242003618161084372.jpg" alt="YOYO blue 3">
+        <p>“Not cold. Just cool beyond explanation”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Blue/6246982352840541102.jpg" alt="YOYO blue 4">
+        <p>“You made blue look warm”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Blue/6301022726575475144.jpg" alt="YOYO blue 5">
+        <p>“In a sea of shades, your blue was unforgettable”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Green Section -->
+  <section class="green-bg">
+    <h3 style="color:#15ff00">💚 Nature & Green</h3>
+    <div class="closet-grid">
+      <div class="closet-card" onclick="toggleColorSet('green')">
+        <img src="Green/6190278373532614028.jpg" alt="YOYO in green">
+        <p>Earthy, fresh, and fierce — like walking poetry in green!</p>
+      </div>
+    </div>
+    <div class="closet-grid color-set hidden" id="green-set">
+      <div class="closet-card">
+        <img src="Green/6246982352840541131.jpg" alt="YOYO green 1">
+        <p>“Leafy chic!”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Green/6095738554140441733.jpg" alt="YOYO green 2">
+        <p>“That wasn’t just fashion. That was photosynthesis-level glow”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Green/6242003618161084385.jpg" alt="YOYO green 3">
+        <p>Your green moments? Pure oxygen for the timeline”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Green/6242003618161084364.jpg" alt="YOYO green 4">
+        <p>“Rooted in grace, blooming in style”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Red Section -->
+  <section class="red-bg">
+    <h3 style="color:#f80202">❤️ Bold in Red</h3>
+    <div class="closet-grid">
+      <div class="closet-card" onclick="toggleColorSet('red')">
+        <img src="Red/6210678519000841548.jpg" alt="YOYO in red">
+        <p>Fiery & fabulous — red isn’t just a color, it’s an attitude!</p>
+      </div>
+    </div>
+    <div class="closet-grid color-set hidden" id="red-set">
+      <div class="closet-card">
+        <img src="Red/6145545954137323346.jpg" alt="YOYO red 1">
+        <p>“This isn’t boredom. This is academic meditation”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Red/6165985488750623515.jpg" alt="YOYO red 2">
+        <p>“the stare is colder than the wind”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Red/6242003618161084378.jpg" alt="YOYO red 3">
+        <p>“When you press ‘leave meeting’ and say something savage before the call ends”</p>
+      </div>
+      <div class="closet-card">
+        <img src="Red/6242003618161084390.jpg" alt="YOYO red 4">
+        <p>“When you wore red, hearts skipped and heads turned”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- White Section -->
+  <section class="white-bg">
+    <h3 style="color:#000000">🤍 White Elegance</h3>
+    <div class="closet-grid">
+      <div class="closet-card" onclick="toggleColorSet('white')">
+        <img src="White/6330293968079795850.jpg" alt="YOYO in white">
+        <p>Simplicity, grace, and charm — all in one outfit!</p>
+      </div>
+    </div>
+    <div class="closet-grid color-set hidden" id="white-set">
+      <div class="closet-card">
+        <img src="White/6242003618161084361.jpg" alt="YOYO white 1">
+        <p>“She brought the flower, not the peace”</p>
+      </div>
+      <div class="closet-card">
+        <img src="White/6242003618161084367.jpg" alt="YOYO white 2">
+        <p>“White on the outside. Drama on the inside ”</p>
+      </div>
+      <div class="closet-card">
+        <img src="White/6242003618161084383.jpg" alt="YOYO white 3">
+        <p>“Soft smiles and sunshine eyes”</p>
+      </div>
+      <div class="closet-card">
+        <img src="White/6242003618161084386.jpg" alt="YOYO white 4">
+        <p>“She’s not trying to be the main character. She just is”</p>
+      </div>
+      <div class="closet-card">
+        <img src="White/6242003618161084389.jpg" alt="YOYO white 5">
+        <p>“you wore white… and the clouds felt underdressed”</p>
+      </div>
+      <div class="closet-card">
+        <img src="White/6246575743991658757.jpg" alt="YOYO white 6">
+        <p>“No filter needed — her vibe does the magic”</p>
+      </div>
+      <div class="closet-card">
+        <img src="White/6246575743991658770.jpg" alt="YOYO white 7">
+        <p>“Not all queens wear crowns. Some wear feathers”</p>
+      </div>
+      <div class="closet-card">
+        <img src="White/6246982352840541038.jpg" alt="YOYO white 8">
+        <p>“Looking like the teacher’s favorite — but causing trouble anyway”</p>
+      </div>
+      <div class="closet-card">
+        <img src="White/6246982352840541083.jpg" alt="YOYO white 9">
+        <p>“She didn’t pick the fight. The leaf touched her first”</p>
+      </div>
+      <div class="closet-card">
+        <img src="White/6325584171367515019.jpg" alt="YOYO white 10">
+        <p>“Graceful. Gentle. Glowing. (But don’t underestimate her)”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- undefined Section -->
+  <section class="undefined-bg">
+    <h3 style="color:#000000">🌟 Undefined & Iconic</h3>
+    <div class="closet-grid">
+      <div class="closet-card" onclick="toggleColorSet('undefined')">
+        <img src="closet/6221786575738616944.jpg" alt="YOYO in undefined">
+        <p>Some looks don’t need categories — they’re just iconically YOYO!</p>
+      </div>
+    </div>
+    <div class="closet-grid color-set hidden" id="undefined-set">
+      <div class="closet-card">
+        <img src="closet/20240206_163835.jpg" alt="YOYO undefined 1">
+        <p>“Trying to see the future... or just where the professor went”</p>
+      </div>
+      <div class="closet-card">
+        <img src="closet/6140927631638510443.jpg" alt="YOYO undefined 2">
+        <p>“Looking cute and freezing at the same time”</p>
+      </div>
+      <div class="closet-card">
+        <img src="closet/6082358983689092232.jpg" alt="YOYO undefined 3">
+        <p>“Warning: This pout may cause sudden loss of self-esteem in others”</p>
+      </div>
+      <div class="closet-card">
+        <img src="closet/6140927631638510418.jpg" alt="YOYO undefined 4">
+        <p>“Wrapped in colors, radiating cozy queen vibes”</p>
+      </div>
+      <div class="closet-card">
+        <img src="closet/6285049824806025497.jpg" alt="YOYO undefined 5">
+        <p>“She didn’t walk, she glided. Someone stop this runway model!”</p>
+      </div>
+      <div class="closet-card">
+        <img src="closet/6242003618161084381.jpg" alt="YOYO undefined 6">
+        <p>“Flower power meets YOYO power. Too pretty to handle!”</p>
+      </div>
+      <div class="closet-card">
+        <img src="closet/6242003618161084392.jpg" alt="YOYO undefined 7">
+        <p>“Simple look. Pure happiness”</p>
+      </div>
+      <div class="closet-card">
+        <img src="closet/6242003618161084373.jpg" alt="YOYO undefined 8">
+        <p>“Soft sweater, soft smile. Heart = melted”</p>
+      </div>
+      <div class="closet-card">
+        <img src="closet/6165985488750623500.jpg" alt="YOYO undefined 9">
+        <p>“Influencer loading… but still in class because attendance matters”</p>
+      </div>
+      <div class="closet-card">
+        <img src="closet/6246982352840541092.jpg" alt="YOYO undefined 10">
+        <p>“Acting like I didn’t force my friend to retake this 17 times”</p>
+      </div>
+    </div>
+  </section>
+  <div style="text-align: center; margin-top: 40px;">
+  <a href="home.html" class="back-link">← Back to Birthday Page</a>
+</div>
+</body>
+</html>
