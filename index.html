@@ -103,9 +103,14 @@
 
 <div id="unlock-section" style="text-align: center; margin-top: 60px;">
   <h3>🔐 Final Unlock: Only for the Real YOYO</h3>
-  <p>Type your life saviour's name or secret code to unlock your final birthday surprise:</p>
+  <p style="font-style: italic; color: #555; padding: 10px 20px;">
+  It's a 3-digit number.<br>
+  The first and last digits are the same.<br>
+  The middle digit? The only one that's truly missing.<br><br>
+  You’ve seen it before — maybe when a page disappears... but this time, it leads to something waiting just for you. 💌
+</p>
 
-  <input type="text" id="secretPassword" placeholder="First name of life saviour" style="padding: 10px; width: 250px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;">
+  <input type="text" id="secretPassword" placeholder="Enter the secret code" style="padding: 10px; width: 250px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;">
   <br><br>
   <button onclick="checkPassword()" style="background-color: #d63384; color: white; padding: 10px 20px; border: none; border-radius: 8px; font-size: 1rem;">🔓 Unlock Message</button>
 
@@ -134,7 +139,7 @@
 <script>
   function checkPassword() {
     const input = document.getElementById("secretPassword").value.trim().toLowerCase();
-    const correctPasswords = ["Niharika", "404"];
+    const correctPasswords = ["404"];
 
     if (correctPasswords.includes(input)) {
       document.getElementById("closing-message").style.display = "block";
